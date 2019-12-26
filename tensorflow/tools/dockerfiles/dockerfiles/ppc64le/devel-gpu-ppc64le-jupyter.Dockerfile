@@ -22,17 +22,17 @@
 ARG UBUNTU_VERSION=18.04
 
 ARG ARCH=
-ARG CUDA=10.1
+ARG cuda=10.2
 FROM nvidia/cuda${ARCH:+-$ARCH}:${CUDA}-base-ubuntu${UBUNTU_VERSION} as base
 # ARCH and CUDA are specified again because the FROM directive resets ARGs
 # (but their default value is retained if set previously)
 ARG ARCH
 ARG CUDA
-ARG CUDNN=7.6.4.38-1
+ARG CUDNN=7.6.5.32-1
 ARG CUDNN_MAJOR_VERSION=7
 ARG LIB_DIR_PREFIX=x86_64
-ARG LIBNVINFER=6.0.1-1
-ARG LIBNVINFER_MAJOR_VERSION=6
+ARG LIBNVINFER=7.0.0-1
+ARG LIBNVINFER_MAJOR_VERSION=7
 
 # Needed for string substitution
 SHELL ["/bin/bash", "-c"]

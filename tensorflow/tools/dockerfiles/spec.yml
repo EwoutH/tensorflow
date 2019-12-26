@@ -179,7 +179,7 @@ slice_sets:
           args:
               - UBUNTU_VERSION=18.04
               - ARCH=ppc64le
-              - CUDA=10.0
+              - cuda=10.2
               - TF_PACKAGE=tensorflow-gpu
           partials:
               - ubuntu/version
@@ -212,7 +212,7 @@ slice_sets:
           args:
               - UBUNTU_VERSION=18.04
               - ARCH=ppc64le
-              - CUDA=10.0
+              - cuda=10.2
               - LIB_DIR_PREFIX=powerpc64le
               - CHECKOUT_TF_SRC=1
           partials:
